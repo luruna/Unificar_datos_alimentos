@@ -1,0 +1,20 @@
+# --- Entornos Virtuales ---
+# Ignorar la carpeta donde se instalan las librerías
+venv/
+env/
+.env
+
+# --- Python ---
+# Archivos temporales de compilación (se crean solos al ejecutar)
+__pycache__/
+*.pyc
+
+# --- Archivos del Sistema ---
+# Archivos basura de Mac/Windows
+.DS_Store
+Thumbs.db
+
+# --- Salidas del programa (Opcional) ---
+# Si no quieres guardar el Excel resultante en el histórico de versiones,
+# descomenta la siguiente línea (quita la almohadilla #):
+# Listado_Alimentos_Unificado.xlsx

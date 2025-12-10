@@ -7,9 +7,9 @@ El script procesa los archivos originales en formato CSV, normaliza las columnas
 ## Características
 
 * **Unificación:** Fusiona listados de BEDCA y USDA.
-* **Normalización:** Limpia y estandariza los nombres de las columnas (ej. elimina espacios dobles).
-* **Trazabilidad:** Añade una columna `Fuente` al final para identificar el origen del dato.
-* **Limpieza:** Rellena los valores inexistentes con "NA" para facilitar la lectura.
+* **Normalización:** Limpia y estandariza los nombres de las columnas (ej. elimina espacios dobles y normaliza encabezados).
+* **Trazabilidad:** Añade una columna `Fuente` al final para identificar si el dato viene de BEDCA o USDA.
+* **Limpieza:** Rellena los valores inexistentes con "NA" para facilitar la lectura y evitar errores de procesamiento.
 
 ## Requisitos
 
@@ -18,7 +18,7 @@ El script procesa los archivos originales en formato CSV, normaliza las columnas
 
 ## Instalación y Uso
 
-Se recomienda utilizar un entorno virtual para ejecutar este proyecto.
+Se recomienda utilizar un entorno virtual para ejecutar este proyecto y asegurar la consistencia de las librerías.
 
 ### 1. Clonar o descargar el repositorio
 Coloca los archivos `BASE_DATOS_BEDCA_COMPLETA.csv` y `BASE_DATOS_USDA_COMPLETA.csv` en la carpeta raíz del proyecto.
@@ -29,3 +29,5 @@ Coloca los archivos `BASE_DATOS_BEDCA_COMPLETA.csv` y `BASE_DATOS_USDA_COMPLETA.
 ```bash
 python -m venv venv
 .\venv\Scripts\activate
+python -m pip install -r requirements.txt
+python crear_bbdd_unificada.py
